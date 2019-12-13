@@ -1,0 +1,14 @@
+Package: impexpcsv
+Title: Import Various csv Files with Common Columns and Export in One csv
+        file
+Description: Import various csv files with common columns and export in one
+        csv file. Csv files are imported with data.table::fread(),
+        row-binded with data.table::rbindlist() and exported with
+        data.table::fwrite().
+Imports: data.table
+Version: 0.0.1
+License: GPL-2
+Author: Gibo <gibo.gaf@gmail.com>
+Maintainer: Gibo <gibo.gaf@gmail.com>
+Encoding: UTF-8
+RoxygenNote: 6.1.1
