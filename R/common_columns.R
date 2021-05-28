@@ -3,7 +3,7 @@
 #' Find common columns of various csv files
 #' 
 #' @param csv_files a character vector with paths to one ore more csv files
-#' @param ... further arguments to be passed to data.table::fread() (exept nrows, which is set to 1)
+#' @param ... further arguments to be passed to data.table::fread() (except nrows, which is set to 1)
 #' 
 #' @return a character vector with the names of the common columns of the csv files
 #' 
