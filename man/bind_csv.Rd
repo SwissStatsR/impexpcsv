@@ -4,8 +4,7 @@
 \alias{bind_csv}
 \title{Create a "row-binded" csv file appending common columns of various csv files}
 \usage{
-bind_csv(csv_files, col_names = NULL, csv_output, sep_output = ";",
-  ...)
+bind_csv(csv_files, col_names = NULL, csv_output, sep_output = ";", ...)
 }
 \arguments{
 \item{csv_files}{a character vector with paths to one ore more csv files}
@@ -16,7 +15,7 @@ bind_csv(csv_files, col_names = NULL, csv_output, sep_output = ";",
 
 \item{sep_output}{column separator of csv_output (defalut: ";")}
 
-\item{...}{further arguments to be passed to data.table::fread() (exept nrows, which is set to 1)}
+\item{...}{further arguments to be passed to data.table::fread() (except nrows, which is set to 1)}
 }
 \value{
 a NULL value. A summary message is printed on the screen.

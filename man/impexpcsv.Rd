@@ -3,7 +3,6 @@
 \docType{package}
 \name{impexpcsv}
 \alias{impexpcsv}
-\alias{impexpcsv-package}
 \title{Import Various csv Files with Common Columns and Export in One csv file}
 \description{
 Import various csv files with common columns and export in one
