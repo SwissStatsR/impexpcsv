@@ -3,4 +3,6 @@
 export(bind_csv)
 export(common_columns)
 export(import_list_csv)
-import(data.table)
+importFrom(data.table,fread)
+importFrom(data.table,fwrite)
+importFrom(data.table,rbindlist)
