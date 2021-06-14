@@ -28,14 +28,16 @@ bind_csv <- function(csv_files, col_names = NULL, csv_output, sep_output = ";",
   stopifnot(is.character(col_names))
   
   # Import col_names of the first csv file and export to csv_output
-  tmp <- data.table::fread(csv_files[1], select = col_names, ...)
+  tmp <- data.table::fread(csv_files[1], select = col_names, 
+                           colClasses = "character", ...)
   data.table::fwrite(tmp, file = csv_output, sep = sep_output, append = FALSE)
   
   # If there is more than one csv file, import one at a time and append to 
   # csv_output
   if(length(csv_files) > 1L){
     for(i in 2:length(csv_files)){
-      tmp <- data.table::fread(csv_files[i], select = col_names, ...)
+      tmp <- data.table::fread(csv_files[i], select = col_names, 
+                               colClasses = "character", ...)
       data.table::fwrite(tmp, file = csv_output, sep = sep_output, 
                          append = TRUE)
     }
@@ -48,3 +50,5 @@ bind_csv <- function(csv_files, col_names = NULL, csv_output, sep_output = ";",
   )
   message(msg)
 }
+
+
