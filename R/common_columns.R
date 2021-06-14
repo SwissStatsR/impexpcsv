@@ -3,7 +3,7 @@
 #' Find common columns of various csv files
 #' 
 #' @param csv_files a character vector with paths to one ore more csv files
-#' @param ... further arguments to be passed to data.table::fread() (except nrows, which is set to 1)
+#' @param ... further arguments to be passed to data.table::fread() (except nrows, which is set to 0)
 #' 
 #' @return a character vector with the names of the common columns of the csv files
 #' 
@@ -17,7 +17,7 @@
 #'   system.file("extdata", "csv02.csv", package = "impexpcsv"))  
 #' )
 #' @export
-common_columns <- function(csv_files, ...){
+common_columns <- function(csv_files, ...) {
   list_columns <- lapply(csv_files, data.table::fread, nrows = 1, ...)
   list_columns <- lapply(list_columns, colnames)
   
