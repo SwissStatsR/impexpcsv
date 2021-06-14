@@ -9,5 +9,10 @@
 #' @docType package
 #' @name impexpcsv
 #' 
-#' @import data.table
+#' @importFrom data.table fread rbindlist fwrite
 NULL
+
+
+
+# #' @import data.table
+# #' @importFrom data.table fread rbindlist fwrite
