@@ -15,7 +15,7 @@ bind_csv(csv_files, col_names = NULL, csv_output, sep_output = ";", ...)
 
 \item{sep_output}{column separator of csv_output (defalut: ";")}
 
-\item{...}{further arguments to be passed to data.table::fread() (except nrows, which is set to 1)}
+\item{...}{further arguments to be passed to data.table::fread() (except nrows, which is set to 0)}
 }
 \value{
 a NULL value. A summary message is printed on the screen.

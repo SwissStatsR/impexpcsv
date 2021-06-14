@@ -9,7 +9,7 @@ common_columns(csv_files, ...)
 \arguments{
 \item{csv_files}{a character vector with paths to one ore more csv files}
 
-\item{...}{further arguments to be passed to data.table::fread() (except nrows, which is set to 1)}
+\item{...}{further arguments to be passed to data.table::fread() (except nrows, which is set to 0)}
 }
 \value{
 a character vector with the names of the common columns of the csv files

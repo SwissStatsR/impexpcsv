@@ -11,7 +11,7 @@ import_list_csv(csv_files, col_names = NULL, ...)
 
 \item{col_names}{a character vector with the names of the columns to be imported from each csv file. If NULL (default), all common columns will be imported.}
 
-\item{...}{further arguments to be passed to data.table::fread() (except nrows, which is set to 1)}
+\item{...}{further arguments to be passed to data.table::fread() (except nrows, which is set to 0)}
 }
 \value{
 a data table with all the csv files binded together
