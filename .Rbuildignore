@@ -2,3 +2,6 @@
 ^\.Rproj\.user$
 impexpcsv.png
 00_check.R
+impexpcsv-report.html
+lib/
+docs/
