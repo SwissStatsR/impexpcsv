@@ -6,12 +6,12 @@ Description: Import various csv files with common columns and export in one
         row-binded with data.table::rbindlist() and exported with
         data.table::fwrite().
 Imports: data.table
-Version: 0.0.4.9000
+Version: 0.0.5
 License: GPL-2
 Author: Gibo <gibo.gaf@gmail.com>
 Maintainer: Gibo <gibo.gaf@gmail.com>
 Encoding: UTF-8
-RoxygenNote: 7.1.1
+RoxygenNote: 7.2.2
 Suggests: 
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
