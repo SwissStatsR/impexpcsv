@@ -23,6 +23,7 @@ use_testthat()
 
 use_test("import_list_csv")
 use_test("bind_csv")
+# use_test("common_columns")
 
 # covr ----------------------
 library(covr)
