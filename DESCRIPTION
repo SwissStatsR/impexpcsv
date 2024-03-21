@@ -8,10 +8,10 @@ Description: Import various csv files with common columns and export in one
 Imports: data.table
 Version: 0.0.5
 License: GPL-2
-Author: Gibo <gibo.gaf@gmail.com>
-Maintainer: Gibo <gibo.gaf@gmail.com>
+Author: Sandro Burri <gibo.gaf@gmail.com>
+Maintainer: Sandro Burri <gibo.gaf@gmail.com>
 Encoding: UTF-8
-RoxygenNote: 7.2.2
+RoxygenNote: 7.2.3
 Suggests: 
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
