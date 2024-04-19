@@ -22,6 +22,26 @@ common_columns(csv_files = "inst/extdata/csv02.csv")
 dir("inst/extdata", full.names = TRUE)
 all_columns(csv_files = dir("inst/extdata", full.names = TRUE))
 
+bind_csv_all(
+  csv_files = dir("inst/extdata", full.names = TRUE), 
+  col_names = NULL, 
+  csv_output = "TEMP.csv"
+)
+data.table::fread("TEMP.csv")
+data.table::fread("inst/extdata/csv01.csv")
+data.table::fread("inst/extdata/csv02.csv")
+file.remove("TEMP.csv")
+
+bind_csv_all(
+  csv_files = dir("inst/extdata", full.names = TRUE), 
+  col_names = c("z", "x", "y"), 
+  csv_output = "TEMP.csv"
+)
+data.table::fread("TEMP.csv")
+data.table::fread("inst/extdata/csv01.csv")
+data.table::fread("inst/extdata/csv02.csv")
+file.remove("TEMP.csv")
+
 
 # usethis -------------------
 library(usethis)
