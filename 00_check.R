@@ -15,6 +15,13 @@ build()
 
 install(upgrade = "never")
 
+# Examples ------------------
+common_columns(csv_files = dir("inst/extdata", full.names = TRUE))
+common_columns(csv_files = "inst/extdata/csv01.csv")
+common_columns(csv_files = "inst/extdata/csv02.csv")
+dir("inst/extdata", full.names = TRUE)
+all_columns(csv_files = dir("inst/extdata", full.names = TRUE))
+
 
 # usethis -------------------
 library(usethis)
