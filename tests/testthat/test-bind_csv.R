@@ -20,7 +20,8 @@ test_that("bind_csv works", {
   d1 <- fread(f[1])
   d2 <- fread(f[2])
   
-  expect_true((nrow(d1) + nrow(d2)) == nrow(d))
+  expect_equal((nrow(d1) + nrow(d2)),  nrow(d))
   
   file.remove(csv_output)
+  rm(p, f, d, d1, d2)
 })
