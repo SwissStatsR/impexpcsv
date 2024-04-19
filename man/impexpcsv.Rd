@@ -2,6 +2,7 @@
 % Please edit documentation in R/00_impexpcsv.R
 \docType{package}
 \name{impexpcsv}
+\alias{impexpcsv-package}
 \alias{impexpcsv}
 \title{Import Various csv Files with Common Columns and Export in One csv file}
 \description{
