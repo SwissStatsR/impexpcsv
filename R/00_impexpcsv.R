@@ -9,7 +9,7 @@
 #' @docType package
 #' @name impexpcsv
 #' 
-#' @importFrom data.table fread rbindlist fwrite
+#' @importFrom data.table fread rbindlist fwrite .SD ':='
 NULL
 
 

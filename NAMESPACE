@@ -2,8 +2,11 @@
 
 export(all_columns)
 export(bind_csv)
+export(bind_csv_all)
 export(common_columns)
 export(import_list_csv)
+importFrom(data.table,':=')
+importFrom(data.table,.SD)
 importFrom(data.table,fread)
 importFrom(data.table,fwrite)
 importFrom(data.table,rbindlist)
