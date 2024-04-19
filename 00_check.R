@@ -42,6 +42,11 @@ data.table::fread("inst/extdata/csv01.csv")
 data.table::fread("inst/extdata/csv02.csv")
 file.remove("TEMP.csv")
 
+common_columns(csv_files = "inst/extdata/csv02.csv")
+import_existing_add_missing(
+  csv_file = "inst/extdata/csv02.csv", 
+  col_names = c("x", "y", "z", "w")
+)
 
 # usethis -------------------
 library(usethis)
