@@ -1,14 +1,5 @@
 
 
-existing_cols <- function(csv_file, col_names, ...) {
-  col_names_first <- common_columns(csv_file, ...)
-  res <- base::intersect(
-    col_names, 
-    col_names_first
-  )
-  res
-}
-
 import_existing_add_missing <- function(csv_file, col_names, ...) {
   col_names_first <- common_columns(csv_file, ...)
   existing_cols <- base::intersect(
@@ -28,4 +19,13 @@ import_existing_add_missing <- function(csv_file, col_names, ...) {
   res <- res[, .SD, .SDcols = col_names]
   res
 }
+
+# existing_cols <- function(csv_file, col_names, ...) {
+#   col_names_first <- common_columns(csv_file, ...)
+#   res <- base::intersect(
+#     col_names, 
+#     col_names_first
+#   )
+#   res
+# }
 
