@@ -18,7 +18,7 @@
 #' )
 #' @export
 common_columns <- function(csv_files, ...) {
-  list_columns <- lapply(csv_files, data.table::fread, nrows = 1, ...)
+  list_columns <- lapply(csv_files, data.table::fread, nrows = 0, ...)
   list_columns <- lapply(list_columns, colnames)
   
   res <- Reduce(base::intersect, list_columns)
