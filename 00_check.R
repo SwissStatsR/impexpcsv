@@ -57,6 +57,8 @@ use_testthat()
 
 use_test("import_list_csv")
 use_test("bind_csv")
+use_test("all_columns")
+use_test("bind_csv_all")
 # use_test("common_columns")
 
 # covr ----------------------
