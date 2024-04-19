@@ -51,6 +51,8 @@ import_existing_add_missing(
 # usethis -------------------
 library(usethis)
 
+use_package_doc()
+
 use_testthat()
 
 use_test("import_list_csv")
