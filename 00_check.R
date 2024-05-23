@@ -82,5 +82,5 @@ build_site()
 # origin is gitlab, github is github
 
 # To push on both remote repositories:
-# git push -u origin main    # push on gitlab
-# git push -u github main    # push on github
+# git push -u origin master    # push on gitlab
+# git push -u github master    # push on github
