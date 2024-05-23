@@ -61,6 +61,8 @@ use_test("all_columns")
 use_test("bind_csv_all")
 # use_test("common_columns")
 
+use_github_action(name = "check-standard")
+
 # covr ----------------------
 library(covr)
 

@@ -5,3 +5,4 @@ impexpcsv.png
 impexpcsv-report.html
 lib/
 docs/
+^\.github$
