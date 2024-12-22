@@ -6,3 +6,6 @@ impexpcsv-report.html
 lib/
 docs/
 ^\.github$
+^_pkgdown\.yml$
+^docs$
+^pkgdown$

@@ -73,8 +73,7 @@ report(p, file = "impexpcsv-report.html")
 
 
 # pkgdown -------------------
-library(pkgdown)
-build_site()
+pkgdown::build_site()
 
 
 # git push both on gitlab and github ------------
