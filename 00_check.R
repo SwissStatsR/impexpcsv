@@ -79,6 +79,7 @@ pkgdown::build_site()
 # git push both on gitlab and github ------------
 # From the terminal:
 # git remote add github https://github.com/SwissStatsR/impexpcsv.git
+# git remote add github git@github.com:SwissStatsR/impexpcsv.git
 # git remote -v
 # origin is gitlab, github is github
 
