@@ -6,7 +6,7 @@ Description: Import various csv files with common columns and export in one
         row-binded with data.table::rbindlist() and exported with
         data.table::fwrite().
 Imports: data.table
-Version: 0.0.6
+Version: 0.0.7
 License: GPL-2
 Author: Sandro Burri <gibo.gaf@gmail.com>
 Maintainer: Sandro Burri <gibo.gaf@gmail.com>

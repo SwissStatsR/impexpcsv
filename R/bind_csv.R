@@ -4,6 +4,7 @@
 #' @inheritParams import_list_csv
 #' @param csv_output path to the csv file to be created and saved
 #' @param sep_output column separator of csv_output (defalut: ";")
+#' @param quote see [data.table::fwrite()]. Default: "auto"
 #' 
 #' @return a NULL value. A summary message is printed on the screen.
 #' 
@@ -20,7 +21,11 @@
 #' }
 #' 
 #' @export
-bind_csv <- function(csv_files, col_names = NULL, csv_output, sep_output = ";",
+bind_csv <- function(csv_files, 
+                     col_names = NULL, 
+                     csv_output, 
+                     sep_output = ";",
+                     quote = "auto",
                      ...){
   stopifnot(is.character(csv_files))
   if(is.null(col_names)) col_names <- common_columns(csv_files, ...)
@@ -29,15 +34,26 @@ bind_csv <- function(csv_files, col_names = NULL, csv_output, sep_output = ";",
   
   # Import col_names of the first csv file and export to csv_output
   tmp <- data.table::fread(csv_files[1], select = col_names, ...)
-  data.table::fwrite(tmp, file = csv_output, sep = sep_output, append = FALSE)
+  data.table::fwrite(
+    tmp, 
+    file = csv_output, 
+    sep = sep_output, 
+    append = FALSE,
+    quote = quote
+  )
   
   # If there is more than one csv file, import one at a time and append to 
   # csv_output
   if(length(csv_files) > 1L){
     for(i in 2:length(csv_files)){
       tmp <- data.table::fread(csv_files[i], select = col_names, ...)
-      data.table::fwrite(tmp, file = csv_output, sep = sep_output, 
-                         append = TRUE)
+      data.table::fwrite(
+        tmp, 
+        file = csv_output, 
+        sep = sep_output, 
+        append = TRUE,
+        quote = quote
+      )
     }
   }
   

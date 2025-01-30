@@ -13,6 +13,7 @@ bind_csv_all <- function(csv_files,
                          col_names = NULL, 
                          csv_output, 
                          sep_output = ";",
+                         quote = "auto",
                          ...) {
   stopifnot(is.character(csv_files))
   if (is.null(col_names)) col_names <- all_columns(csv_files, ...)
@@ -22,7 +23,13 @@ bind_csv_all <- function(csv_files,
   # Import the first csv file, add missing columns and export to csv_output
   tmp <- import_existing_add_missing(csv_files[1], col_names, ...)
   
-  data.table::fwrite(tmp, file = csv_output, sep = sep_output, append = FALSE)
+  data.table::fwrite(
+    tmp, 
+    file = csv_output, 
+    sep = sep_output, 
+    append = FALSE,
+    quote = quote
+  )
   
   # If there is more than one csv file, import one at a time and append to 
   # csv_output
@@ -30,7 +37,13 @@ bind_csv_all <- function(csv_files,
     for (i in 2:length(csv_files)) {
       tmp <- import_existing_add_missing(csv_files[i], col_names, ...)
       
-      data.table::fwrite(tmp, file = csv_output, sep = sep_output, append = TRUE)
+      data.table::fwrite(
+        tmp, 
+        file = csv_output, 
+        sep = sep_output, 
+        append = TRUE,
+        quote = quote
+      )
     }
   }
   

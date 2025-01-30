@@ -4,7 +4,14 @@
 \alias{bind_csv_all}
 \title{Create a "row-binded" csv file appending all columns of various csv files}
 \usage{
-bind_csv_all(csv_files, col_names = NULL, csv_output, sep_output = ";", ...)
+bind_csv_all(
+  csv_files,
+  col_names = NULL,
+  csv_output,
+  sep_output = ";",
+  quote = "auto",
+  ...
+)
 }
 \arguments{
 \item{csv_files}{a character vector with paths to one ore more csv files}
@@ -14,6 +21,8 @@ bind_csv_all(csv_files, col_names = NULL, csv_output, sep_output = ";", ...)
 \item{csv_output}{path to the csv file to be created and saved}
 
 \item{sep_output}{column separator of csv_output (defalut: ";")}
+
+\item{quote}{see [data.table::fwrite()]. Default: "auto"}
 
 \item{...}{further arguments to be passed to data.table::fread() (except nrows, which is set to 0)}
 }

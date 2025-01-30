@@ -86,3 +86,11 @@ pkgdown::build_site()
 # To push on both remote repositories:
 # git push -u origin master    # push on gitlab
 # git push -u github master    # push on github
+
+
+# Copy tar.gz in 00_copia_sorgenti_gib_packs ----
+file.copy(
+  "../impexpcsv_0.0.7.tar.gz", 
+  to = "../00_copia_sorgenti_gib_packs/"
+)
+
